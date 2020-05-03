@@ -23,7 +23,6 @@ import numpy as np
 import itertools
 import time
 from itertools import chain, combinations
-import itertools
 from pymatgen.core.composition import Composition
 
 
