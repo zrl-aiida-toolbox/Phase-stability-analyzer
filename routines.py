@@ -32,7 +32,7 @@ def powerset(iterable):
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
     
 
-def download_and_filter_types(types, mpr, icsd, verbosity=True, remove_non_comp_ox = True  ):
+def download_and_filter_types(types, mpr, icsd, verbosity=True, remove_non_comp_ox = -1  ):
      
         products=[] 
         
@@ -89,7 +89,7 @@ def download_and_filter_types(types, mpr, icsd, verbosity=True, remove_non_comp_
         return products_cleaned
     
     
-def download_and_filter_formula(formulas, mpr, icsd, verbosity=True, remove_non_comp_ox = True ):
+def download_and_filter_formula(formulas, mpr, icsd, verbosity=True, remove_non_comp_ox = -1 ):
      
         if (verbosity):
             print('download_and_filter_formula')
@@ -132,7 +132,7 @@ def download_and_filter_formula(formulas, mpr, icsd, verbosity=True, remove_non_
         return products  
     
     
-def filter_compounds_formula(data, icsd ,verbosity=True, remove_non_comp_ox = True ):
+def filter_compounds_formula(data, icsd ,verbosity=True, remove_non_comp_ox = -1 ):
 
     #check if at least one compound belongs to ICSD
     t_icsd=False
